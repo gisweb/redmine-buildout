@@ -18,10 +18,10 @@ So far you can configure the ``production-database`` name, the ``database-adapte
 
 Prerequisites
 =============
-You will need ruby and ruby-dev installed. Tested with ruby 1.8.
+You will need ruby and ruby-dev installed. Tested with ruby 1.9.1.
 On Ubuntu (and probably all other debian-based distros)
 
-``sudo apt-get install build-essential libopenssl-ruby ruby1.8-dev libmagickwand-dev libmagickcore-dev``
+``sudo apt-get install build-essential libopenssl-ruby ruby1.9-full libmagickwand-dev libmagickcore-dev``
 
 will install prerequisites
 
@@ -37,9 +37,14 @@ followed by a
 
 this will download and install redmine in the local directory.
 
+Session store secret generation:
+
+rake generate_secret_token
+
+
 Install the database adapter of choice to the local gem repo::
 
-    ./bin/gem1.8 install pg
+    ./bin/gem1.9.1 install pg
 
 After completion you can prepare the database structure::
 
